@@ -1,9 +1,8 @@
-year = 2032
+year = 2030
 
-months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь',
-          'Декабрь']
 
-month_numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+
 
 def is_leap_year(year):
     if year % 4 != 0:
@@ -29,21 +28,26 @@ def get_duration(year_value, month_index):
     return duration
 
 
+def print_days():
+    for day in range(1,32):    # Здесь вместо days подставьте диапазон.
+        if day < 10:
+            print(day, end='  ')
+        else:
+            print(day, end=' ')
+        if day % 7 == 0:
+            print()
+
+
 def print_header(year_value, month_index):
-    print(year_value,months[month_index])
+    print(months[month_index], year_value)
     duration = get_duration(year_value, month_index)
     print('Количество дней:', duration)
 
-for month in month_numbers:
-    print_header(year, month)
+
+for month_number in range(12):    # Здесь вместо month_numbers подставьте диапазон.
+    print_header(year, month_number)
+    print_days()
+    print()
+# print('Пн Вт Ср Чт Пт Сб Вс')
 
 
-
-
-# Удалите эти вызовы функции и вместо них напишите цикл,
-# который обработает список month_numbers
-# и на каждой итерации будет вызывать функцию print_header(),
-# поочерёдно подставляя во второй аргумент значения из списка: 0, 1, 2...
-# print_header(year, 0)
-# print_header(year, 1)
-# print_header(year, 2)
