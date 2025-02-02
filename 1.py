@@ -5,7 +5,6 @@ months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май'
 
 month_numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
-
 def is_leap_year(year):
     if year % 4 != 0:
         is_leap = False
