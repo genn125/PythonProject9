@@ -1,27 +1,14 @@
 
-# Список студентов, каждый студент - это кортеж: (имя, средний балл)
-students = [("Алексей", 4.0), ("Мария", 3.8)]
 
-# Функция для увеличения среднего балла конкретного студента
-def increase_average(student, increment):
-    name, average = student
-    return (name, average + increment)
 
-# Функция для увеличения среднего балла всех студентов
-def increase_all_averages(students, increment):
-    return [increase_average(student, increment) for student in students]
+days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
 
-# Функция для получения среднего балла конкретного студента
-def get_average(student):
-    return student[1]
+print('Пн Вт Ср Чт Пт Сб Вс')
 
-# Функция для получения среднего балла всех студентов
-def get_all_averages(students):
-    return [get_average(student) for student in students]
-
-# Применение функций
-students = increase_all_averages(students, 0.2)
-
-for student in students:
-    print(f"{student[0]}: новый средний балл = {student[1]}")
-
+for day in days: # Объявите цикл.
+    if 1 <= day <=9:
+       print (day, end="  ")
+    else:
+       print(day, end=" ")
+    if day % 7 == 0:
+        print('')
