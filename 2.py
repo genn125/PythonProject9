@@ -39,3 +39,4 @@ a.add(57)
 b = {39586,57,57,767,8,0,-5}
 c = a & b
 print(list(c))
+print(c)
