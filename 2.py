@@ -48,6 +48,7 @@ a['c'].append(123)      #  {'q': 1, 'b': 2, 'c': [3, 5, 123]}
 print('1 -',a)
 print('2 -',a1)
 
+
 from copy import deepcopy
 a={'q':1,'b':2,'c':[]}
 a1=deepcopy(a)         # Копирование через deepcopy(a) полностью копирует всё и изменяется всё НЕЗАВИСИМО
