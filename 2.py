@@ -59,25 +59,25 @@
 # print('4 -',a1)
 # ###############################################################################
 #
-#
-# def  merge_lists_to_dict(list_one, list_two):
-#
-#     return (list_one+list_two)
-#
-#
-# print(merge_lists_to_dict(list_two=59,list_one=35, ))
-# print(merge_lists_to_dict(50,list_two=35 ))
-# print(merge_lists_to_dict(['a',True,100],['abc'],))
 
+def  merge_lists_to_dict(list_one, list_two):
+    return list_one+list_two
+print('1 -', merge_lists_to_dict(list_two=59,list_one=35, ))
+print('2 -', merge_lists_to_dict(50,list_two=35 ))
+print('3 -', merge_lists_to_dict(['a',True,100],['abc']))
+# 1 - 94
+# 2 - 85
+# 3 - ['a', True, 100, 'abc']
 
 def update_car_info(**car):
 
     car["is_available"] = True
     return car
 
-print(update_car_info(brand='BMW', price=100000))
-# {'brand': 'BMW', 'price': 100000, 'is_available': True}
-# # TypeError: update_car_info() takes 0 positional arguments but 2 were given
+print('4 -', update_car_info(brand='BMW', price=100000))
+# 4 - {'brand': 'BMW', 'price': 100000, 'is_available': True}
+
+
 # print(update_car_info('BMW', 100000))
-
-
+# # TypeError: update_car_info() takes 0 positional arguments but 2 were given
+#######################################################################################
