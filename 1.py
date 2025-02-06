@@ -56,6 +56,7 @@ def adjust_start_day(start_day, days_in_month):
     result = (start_day + days_in_month) % 7
     return result
 
+
 # Запуск программы.
 def print_calendar(year):
 
