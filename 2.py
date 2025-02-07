@@ -58,23 +58,23 @@
 # print('3 -',a)
 # print('4 -',a1)
 # ###############################################################################
+# #
 #
-
-def  merge_lists_to_dict(list_one, list_two):
-    return list_one+list_two
-print('1 -', merge_lists_to_dict(list_two=59,list_one=35, ))
-print('2 -', merge_lists_to_dict(50,list_two=35 ))
-print('3 -', merge_lists_to_dict(['a',True,100],['abc']))
-# 1 - 94
-# 2 - 85
-# 3 - ['a', True, 100, 'abc']
-
-def update_car_info(**car):
-
-    car["is_available"] = True
-    return car
-
-print('4 -', update_car_info(brand='BMW', price=100000))
+# def  merge_lists_to_dict(list_one, list_two):
+#     return list_one+list_two
+# print('1 -', merge_lists_to_dict(list_two=59,list_one=35, ))
+# print('2 -', merge_lists_to_dict(50,list_two=35 ))
+# print('3 -', merge_lists_to_dict(['a',True,100],['abc']))
+# # 1 - 94
+# # 2 - 85
+# # 3 - ['a', True, 100, 'abc']
+#
+# def update_car_info(**car):
+#
+#     car["is_available"] = True
+#     return car
+#
+# print('4 -', update_car_info(brand='BMW', price=100000))
 # 4 - {'brand': 'BMW', 'price': 100000, 'is_available': True}
 
 #
@@ -82,6 +82,13 @@ print('4 -', update_car_info(brand='BMW', price=100000))
 # # TypeError: update_car_info() takes 0 positional arguments but 2 were given
 #######################################################################################
 #
+a = {2,4,6,8,9,0}
+b = {2,8,9,4,6,0}
+print('Равны ли значения переменных - ', a==b)  # True
+print('Равны ли адреса переменных - ', a is b)  # False
+print(id(a))
+print(id(b))
 
-
-
+print(9 in a)   # True
+print(9999 in b)  #  False
+print([]in a)   # TypeError: unhashable type: 'list'
