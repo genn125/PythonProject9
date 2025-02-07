@@ -79,16 +79,35 @@
 
 #
 # print(update_car_info('BMW', 100000))
-# # TypeError: update_car_info() takes 0 positional arguments but 2 were given
-#######################################################################################
+# # # TypeError: update_car_info() takes 0 positional arguments but 2 were given
+# #######################################################################################
+# #
+# a = {2,4,6,8,9,0}
+# b = {2,8,9,4,6,0}
+# print('Равны ли значения переменных - ', a==b)  # True
+# print('Равны ли адреса переменных - ',  is b)  # False
+# print(id(a))
+# print(id(b))
 #
-a = {2,4,6,8,9,0}
-b = {2,8,9,4,6,0}
-print('Равны ли значения переменных - ', a==b)  # True
-print('Равны ли адреса переменных - ', a is b)  # False
-print(id(a))
-print(id(b))
+# print(9 in a)   # True
+# print(9999 in b)  #  False
+# print([]in a)   # TypeError: unhashable type: 'list'
+###############################################################
 
-print(9 in a)   # True
-print(9999 in b)  #  False
-print([]in a)   # TypeError: unhashable type: 'list'
+def greeting(greet):
+
+    # global info
+    # def info(name):
+    #     return  f'{greet}, {name}!'
+    # return info
+    return lambda name: f'{greet}, {name}!'
+
+rr = greeting('good morning')
+
+
+print(rr('Genn125'))
+print(rr(1))
+
+yy = greeting('Привет')
+print(yy ('Genn125'))
+
