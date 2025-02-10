@@ -26,21 +26,21 @@ print('3 -', filter_to_list([35,True, 'asd',10],str))
 print('4 -', filter_to_list([35,True, 'asd',10],bool))
 
 #
-
-'''
-Используя лямбда функцию
-'''
-
-def filter_to_list(list_to_filter, value_type):
-    return list(filter(lambda elem: type(elem) is  value_type ,list_to_filter))
-
-      # def check_element_type(elem):
-      #     return type(elem) is value_type
-      #   return isinstance(elem,value_type)      # Не рекомендуется, так как True тоже входит в int
-      # return list(filter(check_element_type, list_to_filter))
-
-print('5 -', filter_to_list([35,True, 'asd',10, 5.5],int))
-print('6 -', filter_to_list([35,True, 'asd',10, 5.5],float))
-print('7 -', filter_to_list([35,True, 'asd',10, 5.5],str))
-
-
+#
+# '''
+# Используя лямбда функцию
+# '''
+#
+# def filter_to_list(list_to_filter, value_type):
+#     return list(filter(lambda elem: type(elem) is  value_type ,list_to_filter))
+#
+#       # def check_element_type(elem):
+#       #     return type(elem) is value_type
+#       #   return isinstance(elem,value_type)      # Не рекомендуется, так как True тоже входит в int
+#       # return list(filter(check_element_type, list_to_filter))
+#
+# print('5 -', filter_to_list([35,True, 'asd',10, 5.5],int))
+# print('6 -', filter_to_list([35,True, 'asd',10, 5.5],float))
+# print('7 -', filter_to_list([35,True, 'asd',10, 5.5],str))
+#
+#
