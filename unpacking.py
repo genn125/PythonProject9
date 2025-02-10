@@ -1,15 +1,13 @@
 
 
-user_profile=[{'nam':7,'comment_qt':8},{'na': 25364, 'comment_qty1': 6666},{'n': 78,'comment_qty3':99}]
+user_profile=[{'nam':7,'comment_qt':8},{'a': 25364, 'b': 6666},{'n': 78,'comment_qty3':99}]
+
 qwer1, qwer2, qwer3 = user_profile
 
-def user_info(name,comment_qty):
+def user_info(a,b): print(a,b)
 
+user_info(a=qwer1['nam'],b=qwer1['comment_qt'])
+user_info(**qwer2)
+user_info(qwer3['n'],qwer3['comment_qty3'])
 
-    return name,comment_qty
-
-
-print(user_info(qwer2['na'],qwer2['comment_qty1']))
-print(user_info(qwer1['nam'],qwer1['comment_qt']))
-print(user_info(name=qwer3['n'],comment_qty=qwer3['comment_qty3']))
 
