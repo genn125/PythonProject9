@@ -6,7 +6,7 @@ def count_calls(func):
     global wrapper
     def wrapper(*args, **kwargs):
         wrapper.count += 1
-        # print(f"Функция {func.__name__} вызвана {wrapper.count} раз(а)")
+        # print(f"Функция {func.__name__} вызвана {wrapper.count}-й раз")
         return func(*args, **kwargs)
     wrapper.count = 0
     return wrapper
